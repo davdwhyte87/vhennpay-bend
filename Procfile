@@ -1,1 +1,1 @@
-web: bin/dils-backend
+web: bin/vhennpay-bend
