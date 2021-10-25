@@ -365,10 +365,10 @@ func sendVerificationEmail(user models.User, isOTPResend bool) {
 		"Code": user.PassCode,
 	}
 	email.Template = "activation.html"
-	email.Title = "[DILS]: Welcome"
+	email.Title = "Vhennpay: Welcome"
 	if isOTPResend {
 		email.Template = "resend_activation.html"
-		email.Title = "[DILS]: Reset Password"
+		email.Title = "Vhennpay: Reset Password"
 	}
 	err := utils.SendGoMail(email)
 	if err != nil {

@@ -43,7 +43,7 @@ func main() {
 		// }
 	}
 
-	println(os.Getenv("EMAIL_SENDER"))
+	
 	jwtSecret = os.Getenv("SECRET")
 
 	client, err := initDatabase()
