@@ -34,12 +34,13 @@ var (
 )
 
 func main() {
-	env := os.Getenv("ENV")
+	// env := os.Getenv("ENV")
 	if err := godotenv.Load(); err != nil {
-		if env != "" && env != "DEPLOY-DEV" {
-			log.Println("No .env file found")
-			return
-		}
+		log.Println("No .env file found")
+		// if env != "" && env != "DEPLOY-DEV" {
+		// 	log.Println("No .env file found")
+		// 	return
+		// }
 	}
 
 	jwtSecret = os.Getenv("SECRET")
