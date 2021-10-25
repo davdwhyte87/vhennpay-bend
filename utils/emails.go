@@ -56,7 +56,8 @@ func SendEmail(data EmailData) error {
 	return nil
 }
 
-func sendGoMail(data EmailData) error {
+// SendGoMail ...
+func SendGoMail(data EmailData) error {
 	template, err := template.ParseFiles("utils/email_template/" + data.Template)
 	if err != nil {
 		return err

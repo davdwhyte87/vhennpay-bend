@@ -370,7 +370,7 @@ func sendVerificationEmail(user models.User, isOTPResend bool) {
 		email.Template = "resend_activation.html"
 		email.Title = "[DILS]: Reset Password"
 	}
-	err := utils.SendEmail(email)
+	err := utils.SendGoMail(email)
 	if err != nil {
 		log.Printf("[send_verification]: failed to send mail: %v\n", err)
 		return
